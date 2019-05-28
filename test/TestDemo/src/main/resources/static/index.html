@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome!</h1>
+	<div>
+		
+			<!-- <a href="/addBookDetails"><b>Add BookDetails</b></a> -->
+			<p><b>Add BookDetails</b></p>
+			
+				<ul>
+				<li> 
+					<input type="Button" name="addBookDetailsbutton" id="addBookDetailsbutton"
+						value="Add Book Details" onclick="addBookDetails()" />
+				</li>
+				</ul>
+			
+		
+
+		<p><b>Search By Title</b></p>
+
+
+
+
+		<ul>
+<!-- 			<li> -->
+<!-- 				<p> -->
+<!-- 					<a href="/booksdetailsBytitle/SQL book">Search Book Details for part</a>  -->
+				
+<!-- 				</p> -->
+<!-- 			</li> -->
+			<li>
+				<div>
+<!-- 					<input type="Text" name="title" id="title" placeholder="book title"></input> -->
+
+					<input type="Button" name="searchbutton" id="searchbutton"
+						value="Search Book Details" onclick="searchTitle()" />
+				</div>
+			</li>
+
+		</ul>
+
+
+		<div id="result"></div>
+
+
+	</div>
+
+	<script src="custom/js/jquery.1.12.4.min.js"></script>
+
+	<script>
+		/* function searchTitle() {
+			var title = $("#title").val().trim();
+			if (title == "") {
+				alert("Please enter title");
+				return false;
+			} else {
+				location.href='/booksdetailsBytitle/'+title;
+				
+			 	$.get('/booksdetails', {
+					title : title
+				}, function(data, status) {
+
+					$("#result").html(data);
+
+				}); 
+			}
+
+		} */
+		
+		function searchTitle() {
+			//var title='Java book';
+			var title='book';
+			location.href='/booksdetailsBytitle/'+title;
+		}
+		
+		function addBookDetails() {
+			
+				location.href='/addBookDetails';
+			}
+
+		
+	</script>
+</body>
+</html>
